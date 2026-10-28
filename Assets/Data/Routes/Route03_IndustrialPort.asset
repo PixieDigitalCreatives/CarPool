@@ -1,0 +1,80 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86cb44cd72a1f2742a1ff27b51b82820, type: 3}
+  m_Name: Route03_IndustrialPort
+  m_EditorClassIdentifier: 
+  routeNumber: 3
+  routeName: Industrial Port
+  sceneName: Route03_IndustrialPort
+  theme: 2
+  description: 'Clockwise run along the quay and through the container yards: broad
+    roads and wide drift corners.'
+  controlPoints:
+  - {x: -180, y: 140}
+  - {x: -40, y: 140}
+  - {x: 100, y: 140}
+  - {x: 220, y: 135}
+  - {x: 290, y: 85}
+  - {x: 300, y: 0}
+  - {x: 280, y: -70}
+  - {x: 210, y: -125}
+  - {x: 110, y: -140}
+  - {x: 30, y: -105}
+  - {x: -50, y: -140}
+  - {x: -150, y: -140}
+  - {x: -250, y: -115}
+  - {x: -300, y: -40}
+  - {x: -290, y: 60}
+  - {x: -250, y: 120}
+  sampleSpacing: 2
+  smoothingIterations: 140
+  widthKeys:
+  - fraction: 0
+    width: 20
+  - fraction: 0.15
+    width: 20
+  - fraction: 0.22
+    width: 18
+  - fraction: 0.85
+    width: 18
+  - fraction: 0.93
+    width: 20
+  barrierGap: 1.2
+  barrierHeight: 1.05
+  barrierThickness: 0.7
+  sidewalkWidth: 4
+  checkpointFractions:
+  - 0.2
+  - 0.4
+  - 0.6
+  - 0.8
+  gridPoleDistance: 52
+  gridRowSpacing: 8
+  gridLateralOffset: 3.1
+  parSpeed: 30
+  sectors:
+  - name: Port quay
+    district: 7
+    start: 0.9
+    end: 0.24
+  - name: Container yard
+    district: 8
+    start: 0.24
+    end: 0.52
+  - name: Warehouses
+    district: 9
+    start: 0.52
+    end: 0.9
+  junctions:
+  - 0.63
+  - 0.74
+  environmentSeed: 303

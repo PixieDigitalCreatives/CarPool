@@ -1,0 +1,104 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86cb44cd72a1f2742a1ff27b51b82820, type: 3}
+  m_Name: Route04_HillsideExpress
+  m_EditorClassIdentifier: 
+  routeNumber: 4
+  routeName: Hillside Express
+  sceneName: Route04_HillsideExpress
+  theme: 3
+  description: 'Anticlockwise climb on an elevated plateau above the city: two hairpin
+    switchbacks and a fast ridge road with the sea below.'
+  controlPoints:
+  - {x: -110, y: -150}
+  - {x: -55, y: -150}
+  - {x: 0, y: -150}
+  - {x: 55, y: -150}
+  - {x: 110, y: -150}
+  - {x: 117.76457, y: -148.97777}
+  - {x: 125, y: -145.98076}
+  - {x: 131.2132, y: -141.2132}
+  - {x: 135.98076, y: -135}
+  - {x: 138.97777, y: -127.76457}
+  - {x: 140, y: -120}
+  - {x: 138.97778, y: -112.23543}
+  - {x: 135.98076, y: -105}
+  - {x: 131.2132, y: -98.7868}
+  - {x: 125, y: -94.01924}
+  - {x: 117.76457, y: -91.022224}
+  - {x: 110, y: -90}
+  - {x: 56.666664, y: -90}
+  - {x: 3.3333302, y: -90}
+  - {x: -50, y: -90}
+  - {x: -57.76457, y: -88.977776}
+  - {x: -65, y: -85.98077}
+  - {x: -71.2132, y: -81.2132}
+  - {x: -75.98076, y: -75}
+  - {x: -78.977776, y: -67.76457}
+  - {x: -80, y: -60.000004}
+  - {x: -78.977776, y: -52.235428}
+  - {x: -75.98076, y: -45}
+  - {x: -71.2132, y: -38.786797}
+  - {x: -65, y: -34.019238}
+  - {x: -57.764572, y: -31.022226}
+  - {x: -50, y: -30}
+  - {x: 13.333335, y: -30}
+  - {x: 76.66667, y: -30}
+  - {x: 140, y: -30}
+  - {x: 195, y: 5}
+  - {x: 212, y: 70}
+  - {x: 185, y: 130}
+  - {x: 120, y: 165}
+  - {x: 40, y: 160}
+  - {x: -30, y: 178}
+  - {x: -110, y: 170}
+  - {x: -180, y: 125}
+  - {x: -210, y: 50}
+  - {x: -205, y: -40}
+  - {x: -175, y: -115}
+  sampleSpacing: 2
+  smoothingIterations: 20
+  widthKeys:
+  - fraction: 0
+    width: 13
+  - fraction: 0.12
+    width: 13
+  - fraction: 0.18
+    width: 12
+  - fraction: 0.92
+    width: 12
+  - fraction: 0.97
+    width: 13
+  barrierGap: 1.2
+  barrierHeight: 1.05
+  barrierThickness: 0.7
+  sidewalkWidth: 3
+  checkpointFractions:
+  - 0.2
+  - 0.4
+  - 0.6
+  - 0.8
+  gridPoleDistance: 52
+  gridRowSpacing: 8
+  gridLateralOffset: 3.1
+  parSpeed: 30
+  sectors:
+  - name: Switchbacks
+    district: 10
+    start: 0
+    end: 0.36
+  - name: Ridge road
+    district: 11
+    start: 0.36
+    end: 1
+  junctions: []
+  environmentSeed: 404

@@ -1,0 +1,76 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86cb44cd72a1f2742a1ff27b51b82820, type: 3}
+  m_Name: Route02_WaterfrontRun
+  m_EditorClassIdentifier: 
+  routeNumber: 2
+  routeName: Waterfront Run
+  sceneName: Route02_WaterfrontRun
+  theme: 1
+  description: Anticlockwise coastal boulevard with sweeping bends along the sea,
+    returning through the hotel district.
+  controlPoints:
+  - {x: -200, y: -70}
+  - {x: -80, y: -55}
+  - {x: 40, y: -90}
+  - {x: 160, y: -70}
+  - {x: 260, y: -100}
+  - {x: 340, y: -60}
+  - {x: 355, y: 20}
+  - {x: 300, y: 70}
+  - {x: 190, y: 60}
+  - {x: 80, y: 95}
+  - {x: -30, y: 70}
+  - {x: -150, y: 100}
+  - {x: -260, y: 80}
+  - {x: -330, y: 30}
+  - {x: -330, y: -40}
+  sampleSpacing: 2
+  smoothingIterations: 160
+  widthKeys:
+  - fraction: 0
+    width: 16
+  - fraction: 0.1
+    width: 16
+  - fraction: 0.18
+    width: 15
+  - fraction: 0.85
+    width: 15
+  - fraction: 0.95
+    width: 16
+  barrierGap: 1.2
+  barrierHeight: 1.05
+  barrierThickness: 0.7
+  sidewalkWidth: 5
+  checkpointFractions:
+  - 0.2
+  - 0.4
+  - 0.6
+  - 0.8
+  gridPoleDistance: 52
+  gridRowSpacing: 8
+  gridLateralOffset: 3.1
+  parSpeed: 30
+  sectors:
+  - name: Waterfront promenade
+    district: 5
+    start: 0.9
+    end: 0.48
+  - name: Hotel boulevard
+    district: 6
+    start: 0.48
+    end: 0.9
+  junctions:
+  - 0.57
+  - 0.69
+  - 0.83
+  environmentSeed: 202
