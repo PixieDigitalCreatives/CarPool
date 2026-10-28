@@ -116,33 +116,22 @@ namespace RacingPrototype.EditorTools
             mat.SetFloat("_Smoothness", smoothness);
         }
 
-        /// <summary>The surface mask with its smoothness (alpha) raised: a damp film everywhere, near-mirror puddles in patches.</summary>
+        /// <summary>
+        /// The surface mask with its smoothness (alpha) raised towards a damp film, keeping the scan's own
+        /// variation. (Puddle patches inside the texture repeat every tile and read as a dot grid, so
+        /// there are none.)
+        /// </summary>
         static Texture2D WetMask(string id, Texture2D mask, float wetness)
         {
             string path = $"{Root}/Textures/{id}/{id}_mask_wet.png";
             if (!File.Exists(Path.GetFullPath(path)))
             {
                 var px = ReadPixels(AssetDatabase.GetAssetPath(mask), out int w, out int h);
-                for (int y = 0; y < h; y++)
-                    for (int x = 0; x < w; x++)
-                    {
-                        float u = x / (float)w, v = y / (float)h;
-                        float puddle = Mathf.SmoothStep(0f, 1f, Mathf.InverseLerp(0.52f, 0.68f, TileNoise(u, v, 3f)));
-                        int i = y * w + x;
-                        float target = Mathf.Lerp(0.8f, 0.96f, puddle) * 255f;
-                        px[i].a = (byte)Mathf.RoundToInt(Mathf.Lerp(px[i].a, target, wetness * (0.6f + 0.4f * puddle)));
-                    }
+                for (int i = 0; i < px.Length; i++)
+                    px[i].a = (byte)Mathf.RoundToInt(Mathf.Lerp(px[i].a, 0.84f * 255f, wetness));
                 WritePng(path, px, w, h);
             }
             return Import(path, Kind.Linear);
-        }
-
-        /// <summary>Perlin noise that wraps at the texture edges (blend of four offset samples).</summary>
-        static float TileNoise(float u, float v, float frequency)
-        {
-            float a = Mathf.PerlinNoise(u * frequency, v * frequency), b = Mathf.PerlinNoise((u - 1f) * frequency, v * frequency);
-            float c = Mathf.PerlinNoise(u * frequency, (v - 1f) * frequency), d = Mathf.PerlinNoise((u - 1f) * frequency, (v - 1f) * frequency);
-            return Mathf.Lerp(Mathf.Lerp(a, b, u), Mathf.Lerp(c, d, u), v);
         }
 
         /// <summary>Neutral-grey (0.5 = no change) luminance map of the surface for the x2 detail albedo slot.</summary>

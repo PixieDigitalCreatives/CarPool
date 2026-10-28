@@ -506,12 +506,12 @@ namespace RacingPrototype.EditorTools
             var floorMats = new[]
             {
                 // Polished dark showroom floor: mirrors the softboxes and the car through the box-projected probe.
-                ProceduralAssets.Mat("Menu_Floor", new ProceduralAssets.MatSpec { colour = new Color(0.035f, 0.036f, 0.042f), smoothness = 0.9f, metallic = 0.1f }),
+                ProceduralAssets.Mat("Menu_Floor", new ProceduralAssets.MatSpec { colour = new Color(0.035f, 0.036f, 0.042f), smoothness = 0.84f, metallic = 0.1f }),
                 ProceduralAssets.Mat("Menu_Wall", new Color(0.07f, 0.075f, 0.09f), 0.3f),
                 ProceduralAssets.Mat("Menu_AccentRed", BrandConfig.Current.accentRed, 0.5f, 0f, BrandConfig.Current.accentRed * 3f),
                 ProceduralAssets.Mat("Menu_AccentAmber", BrandConfig.Current.primary, 0.5f, 0f, BrandConfig.Current.primary * 2.4f)
             };
-            PolyHaven.AddDetail(floorMats[0], "rough_concrete", 4f, null, 0.25f);
+            PolyHaven.AddDetail(floorMats[0], "rough_concrete", 4f, null, 0.08f);
             var go = new GameObject("Showroom Shell");
             go.transform.SetParent(showroom, false);
             go.AddComponent<MeshFilter>().sharedMesh = kit.Build("Showroom");
